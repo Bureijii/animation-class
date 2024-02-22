@@ -1,0 +1,39 @@
+body{
+    font-family:;
+}
+
+section{
+    display:grid;
+    height:100vh;
+    place-items:center;
+}
+
+#buttons{
+    display:flex;
+    gap:1rem;
+}
+
+.button-1{
+    background-color:pink;
+    border:0;
+}
+
+.button-1:hover, .button-1:focus{
+
+}
+
+.button-2{
+    background-color:pink;
+}
+
+.button-2:hover, .button-2:focus{
+    
+}
+
+.button-3{
+    background-color:pink;
+}
+
+.button-3:hover, .button-3:focus{
+
+}
