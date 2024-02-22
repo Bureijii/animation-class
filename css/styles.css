@@ -1,6 +1,4 @@
-body{
-    font-family:;
-}
+* {margin:0; padding:0; box-sizing: border-box}
 
 section{
     display:grid;
@@ -10,30 +8,50 @@ section{
 
 #buttons{
     display:flex;
-    gap:1rem;
+    width:90px;
+    flex-direction:column;
+    gap:2rem;
 }
 
 .button-1{
-    background-color:pink;
-    border:0;
+    background-color:rgb(255, 215, 222);
+    border:1px solid rgb(177, 177, 177);
+    padding:15px;
+    border-radius:2rem;
+    cursor:pointer;
+    transition-duration:500ms;
 }
 
 .button-1:hover, .button-1:focus{
-
+    border-radius:1rem;
+    background-color:rgb(241, 194, 241);
 }
 
 .button-2{
-    background-color:pink;
+    background-color:rgb(241, 194, 241);
+    border:0;
+    padding:15px;
+    cursor:pointer;
+    transition-duration:200ms;
 }
 
 .button-2:hover, .button-2:focus{
-    
+    color:white;
+    background-color:rgb(189, 210, 255);
 }
 
 .button-3{
-    background-color:pink;
+    background-color:rgb(189, 210, 255);
+    border:0;
+    padding:15px;
+    border-radius:10px;
+    box-shadow: 5px 4px 19px -7px rgba(92,87,92,0.84);
+    cursor:pointer;
+    transition-duration:200ms;
 }
 
 .button-3:hover, .button-3:focus{
 
+    background-color:rgb(255, 215, 222);
+    padding:20px;
 }
