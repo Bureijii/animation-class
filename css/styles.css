@@ -1,4 +1,15 @@
-* {margin:0; padding:0; box-sizing: border-box}
+body{
+    font-family:'Amita';
+    color:rgb(82, 60, 60);
+    background-color:rgba(233, 232, 218, 0.507);
+}
+
+
+section .section-centered{
+    display:grid;
+    height:100vh;
+    place-items:center;
+}
 
 section{
     display:grid;
@@ -51,7 +62,112 @@ section{
 }
 
 .button-3:hover, .button-3:focus{
-
     background-color:rgb(255, 215, 222);
     padding:20px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:3rem;
+    padding:1rem;
+    width:80vw;
+
+    @media screen and (min-width: 900px){
+        grid-template-columns:repeat(3, 1fr);
+    }
+
+    .card{
+        position:relative;
+        padding:1rem;
+        min-height:50rem;
+        display:flex;
+        align-items:flex-end;
+        border:5px solid rgb(214, 204, 176);
+        border-radius:20rem;
+        overflow:hidden;
+        transition: all 250ms ease-out;
+        filter: drop-shadow(0px 5px 5px #d19b9b);
+
+        &::before{
+            content:"";
+            background-color:rgba(255, 221, 226, 0.3);
+            position:absolute;
+            height:100%;
+            width:100%;
+            inset:0;
+            z-index:-1;
+            transition:background-color 250ms ease-in-out, backdrop-filter 150ms ease-out;
+            backdrop-filter:blur(0rem);
+            -webkit-backdrop-filter:blur(0rem);
+        }
+
+
+        img{
+            position:absolute;
+            width:100%;
+            height:100%;
+            inset:0;
+            object-fit:cover;
+            z-index:-2;
+            transition: all 250ms ease-in-out;
+        }
+
+        h3,
+        .card_heading{
+            transform:translateY(-3rem);
+            opacity:0;
+            transition:transform 250ms ease-out, opacity 350ms ease-out;
+        }
+
+        .card_description{
+            transform:translateY(3rem);
+            opacity:0;
+            transition:all 100ms 250ms ease-out;
+        }
+
+        &:hover{
+
+            border:1px solid rgb(214, 204, 176);
+            border-radius:3rem;
+            filter: drop-shadow(0px 5px 26px #d19b9b);
+
+
+            h3,
+            .card_heading{
+                transform:translateY(0rem);
+                opacity:1;
+            }
+
+            .card_description{
+                transform:translateY(0rem);
+                opacity:1;
+                transition:all 750ms ease-out;
+            }
+
+            img{
+                transform:scale(110%);
+                transition: all 250ms ease-in-out;
+            }
+
+            &::before{
+                background-color:rgba(231, 212, 206, 0.8);
+                backdrop-filter:blur(0.1rem);
+                -webkit-backdrop-filter:blur(0.1rem);
+            }
+        }
+
+        &.color-1:hover::before{
+            background-color:rgba(207, 185, 178, 0.8);
+        }
+
+        &.color-2:hover::before{
+            
+            background-color:rgba(247, 223, 228, 0.8);
+        }
+
+        &.color-3:hover::before{
+            background-color:rgba(224, 204, 166, 0.8);
+        }
+    }
 }
