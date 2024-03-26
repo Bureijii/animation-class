@@ -74,6 +74,7 @@ section{
     width:80vw;
     border:1px solid red;
 
+
     @media screen and (min-width: 900px){
         grid-template-columns:repeat(3, 1fr);
     }
